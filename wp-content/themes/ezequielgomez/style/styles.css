@@ -1,0 +1,303 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: MyriadPro; /* имя шрифта для CSS правил */
+    src: local("MyriadPro-Regular"), /* проверяем наличие шрифта в ОС пользователя */
+         url(MyriadPro-Regular.eot); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: MyriadPro; /* имя шрифта для CSS правил */
+    src: local("MyriadPro-Regular"), /* проверяем наличие шрифта в ОС пользователя */
+         url(MyriadPro-Regular.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: Opium; /* имя шрифта для CSS правил */
+    src: local("Opium Bold"), /* проверяем наличие шрифта в ОС пользователя */
+         url(Opium Bold.eot); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+@font-face {
+    font-family: Opium; /* имя шрифта для CSS правил */
+    src: local("Opium Bold"), /* проверяем наличие шрифта в ОС пользователя */
+         url(Opium Bold.otf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+}
+
+body {
+	margin:0 auto;
+    width:900px;
+	position:relative;
+	background:#fff;
+    color:#000;
+	font-family:MyriadPro;
+}
+
+a{
+	color:#000;
+	text-decoration:none;
+}
+
+a:hover{
+	color:#a71b02;
+	text-decoration:none;
+}
+
+.header{
+	height:222px;
+	width:900px;
+	position:relative;
+	background:url('../images/photo.png') no-repeat right;
+}
+
+.logo{
+	height:157px;
+	width:282px;
+	position:relative;
+	top:32px;
+	left:10px;
+}
+
+.menu{
+	width:900px;
+	border-top:3px solid #a71b02;
+	border-bottom:3px solid #a71b02;
+	text-align:right;
+	font-size:30px;
+}
+
+.menu ul{
+	margin-top:7px;
+	margin-bottom:5px;
+}
+
+.menu li{
+	list-style-type: none;
+	display:inline;
+	margin-left:20px;
+}
+
+.content{
+	padding:15px;
+	font-size:24px;
+}
+
+.post{
+	margin-top:10px;
+}
+
+.post h1{
+	font-size:30px;
+	font-family:Opium;
+}
+
+.post h2{
+	font-size:19px;
+	color:#a71b02;
+}
+
+.post h2 a{
+	color:#a71b02;
+	margin-right:20px;
+}
+
+.post h2 a:hover{
+	text-decoration:underline;
+}
+
+.post img{
+	margin-right:5px;
+}
+
+.text{
+	margin-top:15px;
+	margin-bottom:30px;
+}
+
+.text img{
+	text-align:center;
+}
+
+.navigation{
+	font-family:Opium;
+}
+
+.page-numbers .pages{
+	margin-right:7px;
+}
+
+.current{
+	font-weight:bold;
+}
+
+.404{
+	text-align:center;
+}
+
+.footer{
+	width:900px;
+	height:45px;
+	position:relative;
+	border-top:3px solid #a71b02;
+	border-bottom:3px solid #a71b02;
+	font-size:30px;
+	margin-top:10px;
+	margin-bottom:30px;
+}
+
+.develop{
+	position:absolute;
+	right:0px;
+	top:0px;
+	font-size:14px;
+	margin-top:5px;
+	text-align:right;
+}
+
+.social{
+	position:relative;
+	left:0px;
+	margin-top:3px;
+	margin-left:15px;
+}
+
+.social img{
+	margin-right:5px;
+}
+
+.social a {
+    opacity:0.8;
+}
+
+.social a:hover {
+    opacity:1;
+}
+
+.comment{
+	font-size:18px;
+}
+
+.comment h1{
+	font-size:22px;
+	font-family:Opium;
+	margin-bottom:10px;
+}
+
+.comment p{
+	font-size:20px;
+	margin-bottom:10px;
+}
+
+.commans{
+	font-size:20px;
+	position:relative;
+	margin-bottom:15px;
+}
+.commans1{
+	font-size:20px;
+	position:relative;
+	margin-bottom:5px;
+}
+
+.string{
+	width:400px;
+	height:25px;
+	position:absolute;
+	left:95px;
+	font-size:20px;
+	font-family:MyriadPro;
+}
+
+.string1{
+	width:495px;
+	height:100px;
+	font-size:20px;
+	font-family:MyriadPro;
+	margin-bottom:10px;
+}
+
+.commbut{
+	width:150px;
+	height:40px;
+	font-size:20px;
+	font-family:MyriadPro;
+}
+
+/* Комментарии + форма */
+
+	/* Контейнер комментария */
+.commentlist {
+	display:table;
+	width:100%;
+}
+
+.commentlist .comment {
+	list-style:none;
+	display:block;
+	border-left:2px solid #a71b02;
+	padding-left:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:20px;
+}
+
+.commentlist .comment .comment {
+	margin:10px 10px 10px 10px;
+	padding:5px;
+	width:auto;
+}
+
+	/* Аватарка, имя */
+.comment-author {}
+
+	/* Имя автора */
+.comment-author .fn {
+	font-size:20px;
+	color:#a71b02;
+	font-weight:bold;
+	font-style:normal;
+}
+
+.comment-author .fn a {
+	color:#a71b02;
+	font-weight:bold;
+	font-style:normal;
+}
+
+.comment-author .fn a:hover{
+	text-decoration:underline;
+}
+
+	/* двоеточие */
+.comment-author .says {
+	display:none;
+}
+
+	/* Сама аватарка тег img */
+.avatar {
+	display:none;
+}
+
+	/* Дата добавления */
+.comment-meta {
+	font-size:16px;
+	margin-bottom:10px;
+}
+
+	/* Текст комментария */
+.commentlist p {}
+
+	/* Кнопка "Ответить" */
+.commentlist .reply {
+	display:none;
+}
+
+	/* Форма отправки комментария */
+.form textarea {
+	resize:vertical;
+	width:500px;
+	height:150px;
+}
