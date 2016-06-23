@@ -499,29 +499,36 @@ function getSocialShareButton(){
 	// get posts titles and permalinks
 	$permalink = get_permalink($post->ID);
 	$title = get_the_title();
-	$socialShareButton  = '<div class="gk-social-buttons">
-			<span class="gk-social-label">'.__( 'Share:', 'portfolio' ).'</span>
-			<a class="gk-social-twitter" href="http://twitter.com/share?text='.urlencode($title).'&amp;url='.urlencode($permalink).'"
-	            onclick="window.open(this.href, \'twitter-share\', \'width=550,height=235\');return false;">
-	            <span class="social__icon--hidden">Twitter</span>
-	        </a>
+//	$socialShareButton  = '<div class="gk-social-buttons">
+//			<span class="gk-social-label">'.__( 'Share:', 'portfolio' ).'</span>
+//			<a class="gk-social-twitter" href="http://twitter.com/share?text='.urlencode($title).'&amp;url='.urlencode($permalink).'"
+//	            onclick="window.open(this.href, \'twitter-share\', \'width=550,height=235\');return false;">
+//	            <span class="social__icon--hidden">Twitter</span>
+//	        </a>
+//
+//			<a class="gk-social-fb" href="https://www.facebook.com/sharer/sharer.php?u='.urlencode('php.com').'&amp;src=sdkpreparse"
+//			     onclick="window.open(this.href, \'facebook-share\',\'width=580,height=296\');return false;">
+//			    <span class="social-icon-hidden">Facebook</span>
+//			</a>
+//
+//			<a class="gk-social-gplus" href="https://plus.google.com/share?url='.urlencode($permalink).'"
+//	           onclick="window.open(this.href, \'google-plus-share\', \'width=490,height=530\');return false;">
+//	            <span class="social__icon--hidden">Google+</span>
+//	        </a>
+//	        <a
+//		class="gk-social-fb"
+//		target="_blank"
+//		href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Feze.ptburg.com%2F&amp;src=sdkpreparse">
+//		</a>
+//		</div>
+//		';
 
-			<a class="gk-social-fb" href="https://www.facebook.com/sharer/sharer.php?u='.urlencode('php.com').'&amp;src=sdkpreparse"
-			     onclick="window.open(this.href, \'facebook-share\',\'width=580,height=296\');return false;">
-			    <span class="social-icon-hidden">Facebook</span>
-			</a>
+	$socialShareButton = '<div style="line-height: 32px;" class="a2a_kit a2a_kit_size_32 addtoany_list a2a_target" id=""><a class="a2a_button_facebook" href="http://www.addtoany.com/add_to/facebook?linkurl=%2F2016%2F03%2F03%2Fback-to-tokyo-1-3-2016%2F&amp;linkname=Back%20to%20Tokyo.%201-3-2016&amp;linknote=" title="Facebook" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_facebook"></span><span class="a2a_label">Facebook</span></a><a class="a2a_button_twitter" href="/#twitter" title="Twitter" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_twitter"></span><span class="a2a_label">Twitter</span></a><a class="a2a_button_google_plus" href="/#google_plus" title="Google+" rel="nofollow" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_google_plus"></span><span class="a2a_label">Google+</span></a><a class="a2a_dd addtoany_share_save" href="https://www.addtoany.com/share#url=%2F2016%2F03%2F03%2Fback-to-tokyo-1-3-2016%2F&amp;title=Back%20to%20Tokyo.%201-3-2016&amp;description="><span class="a2a_svg a2a_s__default a2a_s_a2a"></span><span class="a2a_label">Отправить</span></a>
+<script type="text/javascript"><!--
+if(wpa2a)wpa2a.script_load();
+//--></script>
+</div>';
 
-			<a class="gk-social-gplus" href="https://plus.google.com/share?url='.urlencode($permalink).'"
-	           onclick="window.open(this.href, \'google-plus-share\', \'width=490,height=530\');return false;">
-	            <span class="social__icon--hidden">Google+</span>
-	        </a>
-	        <a
-		class="gk-social-fb"
-		target="_blank"
-		href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Feze.ptburg.com%2F&amp;src=sdkpreparse">
-		</a>
-		</div>
-		';
 	return $socialShareButton;
 }
 

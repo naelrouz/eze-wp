@@ -34,7 +34,6 @@
 
 <?php
     wp_footer();
-    echo getSocialShareButton();
 ?>
 
 
@@ -48,15 +47,18 @@
 
             </div>
             <div class="footer__sns icons">
-                <div class="icons__inner"><a href="#" target="_blank">
-                        <i class="fa fa-vk" aria-hidden="true"></i>
-                    </a></div>
-                <div class="icons__inner"><a href="#" target="_blank">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                    </a></div>
-                <div class="icons__inner"><a href="#" target="_blank">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a></div>
+
+               <?php echo getSocialShareButton(); ?>
+
+<!--                <div class="icons__inner"><a href="#" target="_blank">-->
+<!--                        <i class="fa fa-vk" aria-hidden="true"></i>-->
+<!--                    </a></div>-->
+<!--                <div class="icons__inner"><a href="#" target="_blank">-->
+<!--                        <i class="fa fa-facebook" aria-hidden="true"></i>-->
+<!--                    </a></div>-->
+<!--                <div class="icons__inner"><a href="#" target="_blank">-->
+<!--                        <i class="fa fa-twitter" aria-hidden="true"></i>-->
+<!--                    </a></div>-->
             </div>
         </div>
         <div class="footer__menu">

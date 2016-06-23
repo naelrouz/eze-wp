@@ -35,8 +35,8 @@ $(window).ready(function () {
     });
 
 
-    var windowHeight = $(window).height();
-    $("#js-above").css({height: windowHeight + "px"});
+    //var windowHeight = $(window).height();
+    //$("#js-above").css({height: windowHeight + "px"});
 
 
 //----------------------------------Animate-----------------------------------------------------------------------------
