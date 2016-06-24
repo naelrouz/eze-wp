@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
- // $('.cover__bg').trigger('mouseenter');
+    // $('.cover__bg').trigger('mouseenter');
 
-     var windowHeight = $(window).height();
-     $("#js-above").css({height: windowHeight + "px"});
+    var windowHeight = $(window).height();
+    $("#js-above").css({height: windowHeight + "px"});
 
     // $('.cover__bg').stop().delay(1200).animate({
     //     opacity: 1,
@@ -271,13 +271,17 @@ $(document).ready(function () {
         })
     }
 
-
     function r() {
-        var e = $("#js-intro"), i = $("#js-loading"), t = $("#js-ticker"), s = $("#js-top-slide");
+        var e = $("#js-intro"),
+            i = $("#js-loading"),
+            t = $("#js-ticker"),
+            s = $("#js-top-slide");
         e.length && i.length && TweenMax.to([e, i], 1, {
             opacity: 0,
             display: "none"
-        }), o(s, 12500), t.length && setTimeout(function () {
+        }),
+            o(s, 12500),
+        t.length && setTimeout(function () {
             o(t, 6e3)
         }, 100)
     }
@@ -305,25 +309,46 @@ $(document).ready(function () {
     }
 
     var c = {};
-    c.name = window.navigator.userAgent.toLowerCase(), c.isIE = c.name.indexOf("msie") >= 0 || c.name.indexOf("trident") >= 0, c.isiPhone = c.name.indexOf("iphone") >= 0, c.isiPod = c.name.indexOf("ipod") >= 0, c.isiPad = c.name.indexOf("ipad") >= 0, c.isiOS = c.isiPhone || c.isiPod || c.isiPad, c.isAndroid = c.name.indexOf("android") >= 0, c.isTablet = c.isiPad || c.isAndroid && c.name.indexOf("mobile") < 0, c.isIE && (c.verArray = /(msie|rv:?)\s?([0-9]{1,})([\.0-9]{1,})/.exec(c.name), c.verArray && (c.ver = parseInt(c.verArray[2], 10))), c.isiOS && (c.verArray = /(os)\s([0-9]{1,})([\_0-9]{1,})/.exec(c.name), c.verArray && (c.ver = parseInt(c.verArray[2], 10))), c.isAndroid && (c.verArray = /(android)\s([0-9]{1,})([\.0-9]{1,})/.exec(c.name), c.verArray && (c.ver = parseInt(c.verArray[2], 10))), $.fn.inViews = function (e) {
-        var i = $(window), t = {}, s = {};
-        switch (t.top = i.scrollTop(), t.mid = t.top + i.height() / 2, t.bottom = t.top + i.height(), s.top = $(this).offset().top, s.bottom = s.top + $(this).outerHeight(), e) {
-            case"whmid":
-                return s.top > i.height() / 2;
-            case"wh":
-                return s.top > i.height();
-            case"bottom":
-                return s.bottom <= t.bottom;
-            case"center":
-                return s.top <= t.mid;
-            case"top":
-                return s.top <= t.bottom;
-            default:
-                return s.top <= t.bottom && s.top >= t.top
-        }
-    },
+    c.name = window.navigator.userAgent.toLowerCase(),
+        c.isIE = c.name.indexOf("msie") >= 0 || c.name.indexOf("trident") >= 0,
+        c.isiPhone = c.name.indexOf("iphone") >= 0,
+        c.isiPod = c.name.indexOf("ipod") >= 0,
+        c.isiPad = c.name.indexOf("ipad") >= 0,
+        c.isiOS = c.isiPhone || c.isiPod || c.isiPad,
+        c.isAndroid = c.name.indexOf("android") >= 0,
+        c.isTablet = c.isiPad || c.isAndroid && c.name.indexOf("mobile") < 0,
+    c.isIE && (c.verArray = /(msie|rv:?)\s?([0-9]{1,})([\.0-9]{1,})/.exec(c.name),
+    c.verArray && (c.ver = parseInt(c.verArray[2], 10))),
+    c.isiOS && (c.verArray = /(os)\s([0-9]{1,})([\_0-9]{1,})/.exec(c.name),
+    c.verArray && (c.ver = parseInt(c.verArray[2], 10))),
+    c.isAndroid && (c.verArray = /(android)\s([0-9]{1,})([\.0-9]{1,})/.exec(c.name),
+    c.verArray && (c.ver = parseInt(c.verArray[2], 10))),
+        $.fn.inViews = function (e) {
+            var i = $(window), t = {}, s = {};
+            switch (t.top = i.scrollTop(), t.mid = t.top + i.height() / 2,
+                t.bottom = t.top + i.height(),
+                s.top = $(this).offset().top,
+                s.bottom = s.top + $(this).outerHeight(), e) {
+                case"whmid":
+                    return s.top > i.height() / 2;
+                case"wh":
+                    return s.top > i.height();
+                case"bottom":
+                    return s.bottom <= t.bottom;
+                case"center":
+                    return s.top <= t.mid;
+                case"top":
+                    return s.top <= t.bottom;
+                default:
+                    return s.top <= t.bottom && s.top >= t.top
+            }
+        },
+
+// ---- Run
         $(function () {
-            var i = $(window), s = ($("body"), $("#js-main")), n = $("#js-page-change");
+            var i = $(window),
+                s = ($("body"), $("#js-main")),
+                n = $("#js-page-change");
             $.pjax({
                 area: "#js-main, #js-nav, #js-modal-li",
                 link: "a:not([target])",
@@ -353,10 +378,15 @@ $(document).ready(function () {
                     return $("#js-modal").removeClass("is-fadeOut")
                 }), $(document).on("pjax:ready", function () {
                 var e = document.getElementById("js-top-logo");
-                $("#js-cover, #js-ticker").removeClass("is-visible"), null !== e && e.setAttribute("style", "z-index: 1;")
+                $("#js-cover, #js-ticker").removeClass("is-visible"),
+                null !== e && e.setAttribute("style", "z-index: 1;")
             }),
                 $(document).on("pjax:render", function () {
-                    d(), r(), clearTimeout($.data($("#js-page-loading").get(0), "pjax-effect-id")), $("#js-page-loading").fadeOut(100), $.data($("#js-page-loading").get(0), "pjax-effect-id", 0)
+                    d(),
+                        r(),
+                        clearTimeout($.data($("#js-page-loading").get(0), "pjax-effect-id")),
+                        $("#js-page-loading").fadeOut(100),
+                        $.data($("#js-page-loading").get(0), "pjax-effect-id", 0)
                 }),
                 $(window).on("pjax:load", function () {
                     return n.removeClass("is-visible"), $("#js-cover, #js-ticker").addClass("is-visible")

@@ -41,14 +41,15 @@ $(window).ready(function () {
 
 //----------------------------------Animate-----------------------------------------------------------------------------
 
-    function splitToChars(e) {
+    function wordWrapInSpan(e) {
         e.children().andSelf().contents().each(function () {
             3 === this.nodeType && $(this).replaceWith($(this).text().replace(/[\wa-яА-Я0-9_.,-]/g, '<span>$&</span>'));
         })
     }
+    wordWrapInSpan($("#js-text"));
+    wordWrapInSpan($("[id^=js-page-ttl-]"));
 
     var TimelineMax1 = new TimelineMax();
-    splitToChars($("#js-text"));
 
         //TweenLite.set(', {letterSpacing: '5px'});
     TimelineMax1

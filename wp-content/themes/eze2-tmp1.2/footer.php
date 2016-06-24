@@ -3,11 +3,11 @@
  * The template for displaying the footer
  *
  */
- 
+
 ?>
-		</div><!-- #main -->
-	</div><!-- #page -->
-	
+</div><!-- #main -->
+</div><!-- #page -->
+
 
 <!--		--><?php //if (is_active_sidebar('bottom')) : ?>
 <!--		<div id="gk-bottom" role="complementary">-->
@@ -33,9 +33,8 @@
 
 
 <?php
-    wp_footer();
+wp_footer();
 ?>
-
 
 
 <!--Cool Black--><!--FOOTER-->
@@ -48,17 +47,17 @@
             </div>
             <div class="footer__sns icons">
 
-               <?php echo getSocialShareButton(); ?>
+                <?php echo getSocialShareButton(); ?>
 
-<!--                <div class="icons__inner"><a href="#" target="_blank">-->
-<!--                        <i class="fa fa-vk" aria-hidden="true"></i>-->
-<!--                    </a></div>-->
-<!--                <div class="icons__inner"><a href="#" target="_blank">-->
-<!--                        <i class="fa fa-facebook" aria-hidden="true"></i>-->
-<!--                    </a></div>-->
-<!--                <div class="icons__inner"><a href="#" target="_blank">-->
-<!--                        <i class="fa fa-twitter" aria-hidden="true"></i>-->
-<!--                    </a></div>-->
+                <!--                <div class="icons__inner"><a href="#" target="_blank">-->
+                <!--                        <i class="fa fa-vk" aria-hidden="true"></i>-->
+                <!--                    </a></div>-->
+                <!--                <div class="icons__inner"><a href="#" target="_blank">-->
+                <!--                        <i class="fa fa-facebook" aria-hidden="true"></i>-->
+                <!--                    </a></div>-->
+                <!--                <div class="icons__inner"><a href="#" target="_blank">-->
+                <!--                        <i class="fa fa-twitter" aria-hidden="true"></i>-->
+                <!--                    </a></div>-->
             </div>
         </div>
         <div class="footer__menu">
@@ -83,7 +82,7 @@
 <div class="modal" id="js-modal">
     <div class="modal__inner">
 
-        <?php echo getModalMenu();?>
+        <?php echo getModalMenu(); ?>
 
         <div class="modal__sns icons fa-3x">
             <a href="#" target="_blank" class="icons__inner">
@@ -104,6 +103,10 @@
 </div>
 
 
-	<?php wp_footer(); ?>
+<?php
+    wp_footer();
+    var_dump($content);
+?>
+
 </body>
 </html>
