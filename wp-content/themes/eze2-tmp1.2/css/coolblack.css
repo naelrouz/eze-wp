@@ -5,7 +5,8 @@
 /*------------------------ Loader Page------------------------------------*/
 
 #page-preloader{
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -86,13 +87,12 @@ video {
     position: fixed;
     top: 50%;
     left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    /*min-width: 10%;*/
+    width: 30%;
     height: auto;
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
-    background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+    /*background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;*/
     background-size: cover;
     transition: 1s opacity;
     opacity: 0;

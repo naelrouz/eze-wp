@@ -47,7 +47,7 @@ wp_footer();
             </div>
             <div class="footer__sns icons">
 
-                <?php echo getSocialShareButton(); ?>
+<!--                --><?php //echo getSocialShareButton(); ?>
 
                 <!--                <div class="icons__inner"><a href="#" target="_blank">-->
                 <!--                        <i class="fa fa-vk" aria-hidden="true"></i>-->
@@ -105,7 +105,6 @@ wp_footer();
 
 <?php
     wp_footer();
-    var_dump($content);
 ?>
 
 </body>

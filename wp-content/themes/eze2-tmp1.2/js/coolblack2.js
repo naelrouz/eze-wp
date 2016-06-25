@@ -1,29 +1,20 @@
+'use strict'
+
+
+// ----------------------- Functions -----------------------------------------------------------------------------------
+
+function wordWrapInSpan(e) {
+    e.children().andSelf().contents().each(function () {
+        3 === this.nodeType && $(this).replaceWith($(this).text().replace(/[\wa-яА-Я0-9_.,-]/g, '<span>$&</span>'));
+    })
+}
+
+
+
+
+
 $(window).ready(function () {
-
-    function startVideoScreen() {
-        alert('Video');
-
-        // var videoScreen = '<video autoplay id="video-screen">
-        //     <source src="/wp-content/uploads/logo-anim.mp4" type="video/mp4">
-        //     </video>';
-
-        // $('#on-firs-load').innerHTML('cdsdcs');
-
-        //var videoScreenContainer = document.getElementById('page-preloader'),
-        //    video = document.createElement("video"),
-        //    source = document.createElement("source");
-        //
-        //videoScreenContainer.appendChild(video);
-
-        //
-        // video.setAttribute("src", "http://shokijoetaki.com/wordpress/wp-content/themes/shokijoetaki/assets/video/logo-anim.mp4"),
-        //     v.setAttribute("type", "video/mp4"),
-
-    }
-
-
-
-
+    
     //--     Show Modal menu
 
     $("#js-menu-btn-in").on("click", function () {
@@ -31,7 +22,7 @@ $(window).ready(function () {
             i = $("#js-modal");
         i.find("ul");
 
-        e.toggleClass("is-prepend"), i.toggleClass("is-fadeIn")
+        e.toggleClass("is-prepend"), i.toggleClass("is-fadeIn");
     });
 
 
@@ -41,33 +32,11 @@ $(window).ready(function () {
 
 //----------------------------------Animate-----------------------------------------------------------------------------
 
-    function wordWrapInSpan(e) {
-        e.children().andSelf().contents().each(function () {
-            3 === this.nodeType && $(this).replaceWith($(this).text().replace(/[\wa-яА-Я0-9_.,-]/g, '<span>$&</span>'));
-        })
-    }
+
     wordWrapInSpan($("#js-text"));
     wordWrapInSpan($("[id^=js-page-ttl-]"));
 
-    var TimelineMax1 = new TimelineMax();
 
-        //TweenLite.set(', {letterSpacing: '5px'});
-    TimelineMax1
-//        .staggerTo($('#js-text span'), 1, {
-//            ease: Power2.easeOut,
-////                ease: Power2.easeInOut,
-//            cycle: {
-//                delay: function () {
-//                    return Math.random() * 1
-//                }
-//            },
-//            opacity: 1,
-//            scale: 1,
-//        })
-        .to(".cover__bg", 3, {
-        opacity: 1,
-        scale: 1.1,
-    },'-=0');
 
 //------------------------ First section animation ------------------------------
 

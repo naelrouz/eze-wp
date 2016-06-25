@@ -7,7 +7,7 @@
 get_header(); ?>
 
 	<div id="page-preloader">
-		<h1 class="load">
+		<h1 id="loader" class="load">
 			<span>l</span>
 			<span>o</span>
 			<span>a</span>
@@ -17,10 +17,8 @@ get_header(); ?>
 			<span>g</span>
 		</h1>
 
-		<video
-			id="bgvid">
-			<source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">
-			<source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
+		<video id="bgvid">
+			<source src="/wp-content/uploads/logo-anim.mp4" type="video/mp4">
 		</video>
 
 <!--		poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg"-->
