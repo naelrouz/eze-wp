@@ -49,15 +49,15 @@ wp_footer();
 
 <!--                --><?php //echo getSocialShareButton(); ?>
 
-                <!--                <div class="icons__inner"><a href="#" target="_blank">-->
-                <!--                        <i class="fa fa-vk" aria-hidden="true"></i>-->
-                <!--                    </a></div>-->
-                <!--                <div class="icons__inner"><a href="#" target="_blank">-->
-                <!--                        <i class="fa fa-facebook" aria-hidden="true"></i>-->
-                <!--                    </a></div>-->
-                <!--                <div class="icons__inner"><a href="#" target="_blank">-->
-                <!--                        <i class="fa fa-twitter" aria-hidden="true"></i>-->
-                <!--                    </a></div>-->
+                                <div class="icons__inner"><a href="#" target="_blank">
+                                        <i class="fa fa-vk" aria-hidden="true"></i>
+                                    </a></div>
+                                <div class="icons__inner"><a href="#" target="_blank">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </a></div>
+                                <div class="icons__inner"><a href="#" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a></div>
             </div>
         </div>
         <div class="footer__menu">
@@ -96,10 +96,6 @@ wp_footer();
             </a>
         </div>
     </div>
-</div>
-
-<div class="page-change" id="js-page-change">
-    <div class="page-loading" id="js-page-loading">LOADING</div>
 </div>
 
 

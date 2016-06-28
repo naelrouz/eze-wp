@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="fd9759ac-e599-433d-bb41-cfc475720bbe" name="eze.ptburg.com" url="http://eze.ptburg.com/">
+        <fileTransfer host="ptburg.com" port="21" rootFolder="/domains/eze.ptburg.com" password="dfcfdf9fdfd9dfd9dff0dfcbdf92dfd0dff9" username="nael-rouz0">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

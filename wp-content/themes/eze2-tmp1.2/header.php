@@ -33,67 +33,45 @@
 	<script charset="utf-8" src="<?php bloginfo('template_url'); ?>/js/cookie.js"></script>
 	<script charset="utf-8" src="<?php bloginfo('template_url'); ?>/js/TweenMax.min.js"></script>
 	<script>
-		$(window).on('load', function () {
-
-			var topSectionTween = new TimelineMax(), loaderDelay = 5600;
-
-			function topSectionAnimate() {
-
-				//TweenLite.set(', {letterSpacing: '5px'});
-				topSectionTween
-				//        .staggerTo($('#js-text span'), 1, {
-				//            ease: Power2.easeOut,
-				////                ease: Power2.easeInOut,
-				//            cycle: {
-				//                delay: function () {
-				//                    return Math.random() * 1
-				//                }
-				//            },
-				//            opacity: 1,
-				//            scale: 1,
-				//        })
-					.to(".cover__bg", 3, {
-						opacity: 1,
-						scale: 1.1,
-					},'-=0');
-			}
-			
-			if (getCookie('screen') != 'yes') {
-				document.cookie = "screen=yes; path=/;";
-
-
-				var preloader = $('#page-preloader'),
-					load = preloader.find('.load'),
-					vid = document.getElementById("bgvid");
-
-				preloader.css( 'display', 'block' );
-
-//				load.delay(300).fadeOut(300);
-				load.fadeOut(100);
-
-				function playVid() {
-					vid.play();
-				}
-				playVid();
-
-				$('#bgvid').css({
-					     opacity: 1,
-					 });
-
-				preloader.delay(loaderDelay).fadeOut(1000);
-
-				setTimeout(topSectionAnimate, loaderDelay);
-
-
-			}else {
-				topSectionAnimate();
-			}
-
-
-		});
+//		$(window).on('load', function () {
+//
+//			var loaderDelay = 5600;
+//
+//
+//			if (getCookie('screen') != 'yes') {
+//				document.cookie = "screen=yes; path=/;";
+//
+//
+//				var preloader = $('#page-preloader'),
+//					load = preloader.find('.load'),
+//					vid = document.getElementById("bgvid");
+//
+//				preloader.css( 'display', 'block' );
+//
+////				load.delay(300).fadeOut(300);
+//				load.fadeOut(100);
+//
+//				function playVid() {
+//					vid.play();
+//				}
+//				playVid();
+//
+//				$('#bgvid').css({
+//					     opacity: 1,
+//					 });
+//
+//				preloader.delay(loaderDelay).fadeOut(1000);
+//			}
+//
+//
+//		});
 	</script>
 	<!-- / CoolBlack -->
-	<style></style>
+	<style>
+		hr{
+			opacity: ;
+		}
+	</style>
 </head>
 <body <?php body_class(); ?>>
 	<!--[if lte IE 8]>

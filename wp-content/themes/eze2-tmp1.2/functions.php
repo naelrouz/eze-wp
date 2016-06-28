@@ -396,7 +396,7 @@ if(!function_exists('portfolio_social_button')) {
 		// add share button only on posts pages
 		if(!is_feed() && !is_home() && !is_page() && get_theme_mod('portfolio_post_show_social', '1') == '1') {
 			$content = $content . '<div class="gk-social-buttons">
-			<span>Жопа</span>
+			
 			<span class="gk-social-label">'.__( 'Share:', 'portfolio' ).'</span>
 			<a class="gk-social-twitter" href="http://twitter.com/share?text='.urlencode($title).'&amp;url='.urlencode($permalink).'"
 	            onclick="window.open(this.href, \'twitter-share\', \'width=550,height=235\');return false;">

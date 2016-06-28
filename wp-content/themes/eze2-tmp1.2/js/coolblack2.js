@@ -11,9 +11,39 @@ function wordWrapInSpan(e) {
 
 
 
+function topSectionAnimate() {
+
+    var topSectionTween = new TimelineMax();
+
+    //TweenLite.set(', {letterSpacing: '5px'});
+    topSectionTween
+    //        .staggerTo($('#js-text span'), 1, {
+    //            ease: Power2.easeOut,
+    ////                ease: Power2.easeInOut,
+    //            cycle: {
+    //                delay: function () {
+    //                    return Math.random() * 1
+    //                }
+    //            },
+    //            opacity: 1,
+    //            scale: 1,
+    //        })
+
+        // .fromTo("#sing", 1, {
+        //     opacity: 0,
+        //
+        // })
+        .to(".cover__bg", 3, {
+            opacity: 1,
+            scale: 1.1,
+        },'-=1');
+}
+
 
 
 $(window).ready(function () {
+
+    wordWrapInSpan($("#js-text"));
     
     //--     Show Modal menu
 
@@ -26,15 +56,16 @@ $(window).ready(function () {
     });
 
 
-    //var windowHeight = $(window).height();
-    //$("#js-above").css({height: windowHeight + "px"});
+    // var windowHeight = $(window).height();
+    // $("#js-above").css({height: windowHeight + "px"});
 
 
 //----------------------------------Animate-----------------------------------------------------------------------------
 
 
-    wordWrapInSpan($("#js-text"));
-    wordWrapInSpan($("[id^=js-page-ttl-]"));
+
+    // wordWrapInSpan($("[id^=js-page-ttl-]"));
+    topSectionAnimate();
 
 
 
